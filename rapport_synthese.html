@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport Qualité — TP Scraping</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; color: #333; }
+    h1   { color: #1a5276; border-bottom: 2px solid #1a5276; padding-bottom: 8px; }
+    h2   { color: #2874a6; margin-top: 30px; }
+    table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+    th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; }
+    th   { background: #2874a6; color: white; }
+    tr:nth-child(even) { background: #f2f2f2; }
+    .score { font-size: 2em; font-weight: bold; color: #1a5276; text-align: center; padding: 20px; }
+    .ok   { color: #27ae60; font-weight: bold; }
+    .ko   { color: #e74c3c; font-weight: bold; }
+    .warn { color: #f39c12; font-weight: bold; }
+    footer { margin-top: 40px; font-size: 0.85em; color: #999; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Rapport Qualité — Dataset Scraping IA</h1>
+  <p><strong>Généré le :</strong> 29/04/2026 à 10:12</p>
+  <p><strong>Source :</strong> data/export.csv — 373 lignes</p>
+
+  <h2>Tableau de bord qualité</h2>
+  <table>
+    <tr><th>#</th><th>Dimension</th><th>Test</th><th>Résultat</th><th>Score /10</th></tr>
+    <tr><td>1</td><td>Complétude</td><td>titres sans valeur nulle</td>
+        <td class="ok">OK — 0 vide</td>
+        <td>10</td></tr>
+    <tr><td>2</td><td>Validité</td><td>URLs commençant par http</td>
+        <td class="ok">OK — 0 invalide</td>
+        <td>10</td></tr>
+    <tr><td>3</td><td>Unicité</td><td>absence de doublons titre+url</td>
+        <td class="ok">OK — 0 doublon</td>
+        <td>10</td></tr>
+    <tr><td>4</td><td>Exactitude</td><td>format date ISO AAAA-MM-JJ</td>
+        <td class="warn">Non évaluable</td>
+        <td>5</td></tr>
+    <tr><td>5</td><td>Cohérence</td><td>titres &gt; 5 caractères</td>
+        <td class="ok">OK — 0 suspect</td>
+        <td>10</td></tr>
+    <tr><td>6</td><td>Actualité</td><td>données &lt; 12 mois</td>
+        <td class="warn">Non évaluable</td>
+        <td>5</td></tr>
+  </table>
+
+  <div class="score">Note globale : 8.3 / 10</div>
+
+  <h2>Note de synthèse</h2>
+  <p><em>Complétez cette section dans le notebook 04_synthese.ipynb</em></p>
+
+  <footer>TP Ingénierie des Données — Scraping Responsable &amp; Audit Qualité</footer>
+</body>
+</html>
